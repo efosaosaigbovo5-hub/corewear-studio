@@ -1,0 +1,534 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #f7f5f0;
+  color: #25251f;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 25px 7%;
+  background: #25251f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+header h1 {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+header h1 span {
+  color: #c6a77a;
+}
+
+header p {
+  font-size: 13px;
+  color: #dedbd2;
+}
+
+main {
+  width: 86%;
+  max-width: 800px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+main h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+main p {
+  margin: 25px 0;
+  color: #77776f;
+}
+
+button {
+  border: none;
+  padding: 15px 25px;
+  background: #25251f;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #514c40;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  border-top: 1px solid #dedbd2;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  header h1 {
+    font-size: 19px;
+  }
+
+  header p {
+    font-size: 11px;
+  }
+
+  main {
+    margin: 80px auto;
+  }
+}
+
+
+/* HERO SECTION */
+.hero {
+  padding: 70px 20px;
+  background: #eeece5;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #8a7558;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.hero h2 {
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 8vw, 72px);
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.hero h2 span {
+  color: #a98a60;
+  font-style: italic;
+}
+
+.hero-text {
+  max-width: 420px;
+  margin: 25px auto !important;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.shop-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 16px 28px;
+  background: #25251f;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: background 0.3s;
+}
+
+.shop-button:hover {
+  background: #a98a60;
+}
+
+/* COLLECTION SECTION */
+.collection {
+  padding: 55px 20px;
+  text-align: center;
+}
+
+.collection h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.collection p {
+  margin-top: 15px;
+  color: #77776f;
+  line-height: 1.7;
+}
+
+
+/* COLLECTION SECTION */
+.collection {
+  padding: 70px 7%;
+  text-align: center;
+}
+
+.collection h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: normal;
+}
+
+.collection-intro {
+  margin: 15px 0 35px;
+  color: #77776f;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.product-card {
+  min-width: 0;
+}
+
+.product-image {
+  min-height: 220px;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 15px;
+  margin-bottom: 18px;
+}
+
+.product-image span {
+  font-size: 12px;
+  color: #25251f;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 7px 10px;
+}
+
+.product-one {
+  background: linear-gradient(145deg, #dedbd2, #aaa69a);
+}
+
+.product-two {
+  background: linear-gradient(145deg, #c8c1b4, #817b70);
+}
+
+.product-three {
+  background: linear-gradient(145deg, #e5d9c9, #b6a188);
+}
+
+.product-card h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: #8a7558;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .product-image {
+    min-height: 160px;
+  }
+
+  .product-card h3 {
+    font-size: 13px;
+  }
+}
+
+
+/* FIX PRODUCT IMAGE ARRANGEMENT */
+.product-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 18px;
+  background: #e5e0d7;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-image span {
+  position: absolute;
+  top: 12px;
+  right: 12p
+
+x;
+  z-index: 1;
+}
+
+
+/* WHATSAPP ORDER BUTTONS */
+.order-button {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px 8px;
+  background: #25251f;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  transition: background 0.3s;
+}
+
+.order-button:hover {
+  background: #8a7558;
+}
+
+
+/* HEADER NAVIGATION */
+header {
+  flex-wrap: wrap;
+}
+
+.brand {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.brand span {
+  color: #c6a77a;
+}
+
+header .tagline {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #c6a77a;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 22px;
+  }
+}
+
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 65px 20px;
+  background: #eeece5;
+  text-align: center;
+}
+
+.contact-section h2 {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: normal;
+}
+
+.contact-section > p:not(.eyebrow) {
+  margin: 20px auto;
+  color: #77776f;
+  line-height: 1.7;
+}
+
+
+/* WHY COREWEAR */
+.benefits {
+  padding: 70px 7%;
+  text-align: center;
+}
+
+.benefits h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  text-align: left;
+}
+
+.benefit {
+  padding: 25px 0;
+  border-top: 1px solid #c6a77a;
+}
+
+.benefit span {
+  color: #a98a60;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.benefit h3 {
+  margin: 18px 0 12px;
+  font-size: 17px;
+}
+
+.benefit p {
+  color: #77776f;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .benefit {
+    padding: 20px 0;
+  }
+}
+
+/* PROFESSIONAL FOOTER */
+.site-footer {
+  padding: 45px 7% 20px;
+  background: #25251f;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-brand {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.footer-brand span {
+  color: #c6a77a;
+}
+
+.site-footer > p {
+  margin: 15px 0 25px;
+  color: #dedbd2;
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.footer-links a {
+  color: #dedbd2;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: #c6a77a;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid #514c40;
+}
+
+.footer-bottom p {
+  margin: 8px 0;
+  color: #bdb9af;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* FINAL MOBILE POLISH */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 380px) {
+  header {
+    padding: 18px 4%;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .tagline {
+    font-size: 11px;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .product-grid {
+    gap: 10px;
+  }
+
+  .product-card h3 {
+    font-size: 12px;
+  }
+
+  .order-button {
+    padding: 11px 4px;
+    font-size: 10px;
+  }
+}
